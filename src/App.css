@@ -1,3 +1,12 @@
+
+.flex {
+  display: flex;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
 }
@@ -14,13 +23,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  height: 10vh;
+  padding: 0.4rem 0.2rem;
+  font-weight: 500;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  background-color: #303544;
   color: white;
 }
 
@@ -35,4 +46,98 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  width: 20%;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c4350;
+}
+
+.card h2 {
+  color: white;
+  font-weight: 500;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form button {
+  padding: 0.8rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: rgb(49, 77, 87);
+  border-radius: 0.4rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+form button:hover {
+  background-color: rgb(28, 55, 65);
+}
+
+form h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.input-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 90%;
+}
+
+.input-container input {
+  width: 40%;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.4rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: transparent;
+}
+
+.input-container input:focus {
+  outline: lightblue;
+}
+
+.text-error {
+  color: lightcoral;
+}
+.text-success {
+  color: lightgreen;
+}
+
+.user-table{
+  color: white;
+  padding: 1rem;
+  border-radius: .4rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  background-color: #303544;
+  
+  
 }
