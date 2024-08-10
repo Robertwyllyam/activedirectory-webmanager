@@ -1,9 +1,8 @@
-
 .flex {
   display: flex;
 }
 
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
 
@@ -73,13 +72,15 @@
   margin-bottom: 1rem;
 }
 
-form {
+form,
+.computer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-form button {
+form button,
+.computer-container button {
   padding: 0.8rem;
   cursor: pointer;
   border: none;
@@ -90,8 +91,15 @@ form button {
   font-size: 0.8rem;
 }
 
-form button:hover {
+form button:hover,
+.computer-container button:hover {
   background-color: rgb(28, 55, 65);
+}
+
+form button:disabled,
+.computer-container button:disabled {
+  background-color: rgb(141, 195, 214);
+  cursor: not-allowed;
 }
 
 form h1 {
@@ -131,13 +139,11 @@ form h1 {
   color: lightgreen;
 }
 
-.user-table{
+.user-table {
   color: white;
   padding: 1rem;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   margin-top: 1rem;
   font-weight: 500;
   background-color: #303544;
-  
-  
 }

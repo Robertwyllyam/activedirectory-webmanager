@@ -8,15 +8,22 @@ body {
   background-color: #282c34;
 }
 
-main{
+main {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
-  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.w-full {
+  width: 90%;
+}
+
+.select {
+  width: 40%;
 }

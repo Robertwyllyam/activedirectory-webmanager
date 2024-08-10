@@ -4,11 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
-import ComputerManagement from "./pages/ComputerManagement";
+import ComputerManagement from "./pages/ComputerManagement/ComputerManagement";
 import UserManagement from "./pages/UserManagement/UserManagement";
 import PasswordReset from "./pages/PasswordReset";
 import CreateUser from "./pages/UserManagement/CreateUser";
 import GetUser from "./pages/UserManagement/GetUser";
+import GetComputer from "./pages/ComputerManagement/GetComputer";
+import CreateComputer from "./pages/ComputerManagement/CreateComputer";
+import Login from "./pages/Login/Login";
+import AuthContextProvider from "./contexts/AuthContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,14 +23,19 @@ root.render(
       <Link style={{ textDecoration: "none" }} to="/">
         <header className="App-header">AD Web Manager</header>
       </Link>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/pcMgmt" element={<ComputerManagement />} />
-        <Route path="/pwreset" element={<PasswordReset />} />
-        <Route path="/userMgmt" element={<UserManagement />} />
-        <Route path="/userMgmt/newUser" element={<CreateUser />} />
-        <Route path="/userMgmt/listUsers" element={<GetUser />} />
-      </Routes>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/pwreset" element={<PasswordReset />} />
+          <Route path="/userMgmt" element={<UserManagement />} />
+          <Route path="/userMgmt/newUser" element={<CreateUser />} />
+          <Route path="/userMgmt/listUsers" element={<GetUser />} />
+          <Route path="/pcMgmt" element={<ComputerManagement />} />
+          <Route path="/pcMgmt/pcSearch" element={<GetComputer />} />
+          <Route path="/pcMgmt/pcCreate" element={<CreateComputer />} />
+        </Routes>
+      </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

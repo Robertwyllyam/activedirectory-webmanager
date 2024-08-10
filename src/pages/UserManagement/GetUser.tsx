@@ -23,9 +23,14 @@ const GetUser = () => {
       ></Input>
       <button disabled={loading || !username}>Search</button>
 
+      {result && result?.length === 0 && (
+        <p className="text-error">User not found!</p>
+      )}
+
       {result && (
         <div className="user-table">
           <p>Name: {result.givenName}</p>
+          <p>DN: {result.dn}</p>
           <p>DN: {result.dn}</p>
         </div>
       )}

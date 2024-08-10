@@ -17,6 +17,7 @@ export const useFetch = () => {
         data: body,
       });
       setResult(data);
+      return data;
     } catch (err: any) {
       const errorMessage = err?.response?.data ?? err.toString();
       setError(errorMessage);

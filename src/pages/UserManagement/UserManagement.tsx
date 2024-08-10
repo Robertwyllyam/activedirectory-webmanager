@@ -8,22 +8,6 @@ const UserManagement = () => {
   const [userData, setUserData] = useState<any>(null);
   const [error, setError] = useState<any>(null);
 
-  async function getUserData() {
-    try {
-      setLoading(true);
-      const { data } = await api.get("/userData");
-      setUserData(data);
-    } catch (err: any) {
-      setError(err.toString());
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    getUserData();
-  }, []);
-
   if (loading) {
     return (
       <div style={{ textAlign: "center", color: "white" }}>Loading...</div>

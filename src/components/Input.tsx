@@ -5,13 +5,13 @@ const Input = ({
   label,
   state,
   setState,
-  type,
+  type = "text",
 }: {
   name: string;
   label: string;
   state: string;
   setState: (value: string) => void;
-  type: string;
+  type?: string;
 }) => {
   return (
     <div className="input-container">
